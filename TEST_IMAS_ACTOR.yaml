@@ -1,0 +1,44 @@
+---
+actor_description:
+    actor_name: testact
+    actor_type: python
+    data_type: legacy
+code_description:
+    arguments:
+    -   intent: IN
+        name: IDS_EQ_IN
+        type: equilibrium
+    -   intent: OUT
+        name: IDS_EQ_OUT
+        type: equilibrium
+    documentation: Actor for the Test code.
+    implementation:
+        code_parameters:
+            parameters: ./indata.xml
+            schema: ./indata.xsd
+        code_path: ./libtest.a
+        data_type: legacy
+        include_path: ./test_imas_module.mod
+        programming_language: fortran
+        root_dir: /pfs/home/g2slazer/src/iwrap_minimal/
+        subroutines:
+            finalize: ''
+            init: test_imas_init
+            main: test_imas
+    settings:
+        compiler_cmd: ifort
+        extra_libraries:
+            path_defined:
+            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_scalapack_ilp64.a
+            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_intel_ilp64.a
+            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_sequential.a
+            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_core.a
+            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_blacs_intelmpi_ilp64.a
+            pkg_config_defined:
+            - netcdf-fortran-amd64_intel_17
+            - mkl-2017.1-amd64_intel_17
+            - hdf5
+            - xmllib-ifort
+        mpi_compiler_cmd: mpiifort
+        open_mp_switch: ''
+...
