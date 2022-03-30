@@ -15,8 +15,13 @@ xml_test :
 	@xmllint --noout indata.xsd indata.xml
 	@xmllint --noout --schema indata.xsd indata.xml
 
+run : actor_test
+	python3 test.py
+
 help :
 	@echo "Simplifies building various codes for IMAS"
 	@echo "  libtest.a: Clean build of the library"
 	@echo "  xml_test: Checks VMEC XML files"
 	@echo "  actor_test: Builds TEST actor using iwrap"
+	@echo "  run: Runs the python actor."
+

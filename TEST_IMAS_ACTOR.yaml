@@ -29,11 +29,6 @@ code_description:
         compiler_cmd: ifort
         extra_libraries:
             path_defined:
-            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_scalapack_ilp64.a
-            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_intel_ilp64.a
-            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_sequential.a
-            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_core.a
-            - /cineca/prod/opt/compilers/intel/pe-xe-2017/binary/mkl/lib/intel64/libmkl_blacs_intelmpi_ilp64.a
             pkg_config_defined:
             - netcdf-fortran-amd64_intel_17
             - mkl-2017.1-amd64_intel_17
