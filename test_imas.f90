@@ -148,7 +148,7 @@ SUBROUTINE TEST_EQIN_IMAS(IDS_EQ_IN, status_code, status_message)
   END IF
 
   !----  Check Cocos Index
-  !cocos_index = IDS_EQ_IN%time_slice(itime)%profiles_2d(1)%grid_type%index
+  cocos_index = IDS_EQ_IN%time_slice(itime)%profiles_2d(1)%grid_type%index
   WRITE(*,*) ' IDS COCOS Convention: ',cocos_index
 
 

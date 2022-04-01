@@ -20,7 +20,7 @@ code_description:
         data_type: legacy
         include_path: ./test_imas_module.mod
         programming_language: fortran
-        root_dir: /home/ITER/lazerss/src/IWRAP_TEST/
+        root_dir: ''
         subroutines:
             finalize: ''
             init: test_imas_init
@@ -28,7 +28,7 @@ code_description:
     settings:
         compiler_cmd: ifort
         extra_libraries:
-            path_defined:
+            path_defined: []
             pkg_config_defined:
             - xmllib
         mpi_compiler_cmd: mpiifort

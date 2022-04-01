@@ -8,7 +8,7 @@ input_entry = imas.DBEntry(imas.imasdef.MDSPLUS_BACKEND,'iter',131024,1,'public'
 output_entry = imas.DBEntry(imas.imasdef.MDSPLUS_BACKEND,'test',131024,1,os.environ['USER'])
 print('input_entry.open()')
 input_entry.open()
-print('output_entry.open()')
+print('output_entry.create()')
 output_entry.create()
 
 print('test_actor=test()')
