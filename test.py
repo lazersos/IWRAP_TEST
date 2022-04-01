@@ -28,8 +28,8 @@ test_actor.initialize(runtime_settings=runtime_settings, code_parameters=code_pa
 
 print('input_equilibrium = input_entry.get_slice(equilibrium,200.,1)')
 input_equilibrium = input_entry.get_slice('equilibrium',200.,1)
-print('input_equilibrium = imas.equilibrium()')
-input_equilibrium = imas.equilibrium()
+#print('input_equilibrium = imas.equilibrium()')
+#input_equilibrium = imas.equilibrium()
 
 print('output_equilibrium = test_actor(input_equilibrium)')
 output_equilibrium = test_actor(input_equilibrium)

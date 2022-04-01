@@ -20,7 +20,7 @@ code_description:
         data_type: legacy
         include_path: ./test_imas_module.mod
         programming_language: fortran
-        root_dir: /pfs/home/g2slazer/src/iwrap_minimal/
+        root_dir: /home/ITER/lazerss/src/IWRAP_TEST/
         subroutines:
             finalize: ''
             init: test_imas_init
@@ -30,10 +30,7 @@ code_description:
         extra_libraries:
             path_defined:
             pkg_config_defined:
-            - netcdf-fortran-amd64_intel_17
-            - mkl-2017.1-amd64_intel_17
-            - hdf5
-            - xmllib-ifort
+            - xmllib
         mpi_compiler_cmd: mpiifort
         open_mp_switch: ''
 ...

@@ -9,9 +9,9 @@ libtest.a :
 	ar -cruv libtest.a test_imas.o
 
 actor_test : libtest.a
-	iwrap -f TEST_IMAS_ACTOR.yaml
+	iwrap -f TEST_IMAS_ACTOR.yaml -i $(ACTOR_FOLDER)
 
-xml_test : 
+xml_test :
 	@xmllint --noout indata.xsd indata.xml
 	@xmllint --noout --schema indata.xsd indata.xml
 
