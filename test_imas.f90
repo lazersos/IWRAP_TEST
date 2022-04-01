@@ -82,8 +82,8 @@ SUBROUTINE TEST_IMAS(IDS_EQ_IN, IDS_EQ_OUT, INDATA_XML, status_code, status_mess
   !status_message = 'OK'
 
   !----  MPI initialisation ----
-  CALL MPI_initialized(lmpi_flag, impi_flag)
-  if (.not. lmpi_flag)   call MPI_INIT(impi_flag)
+!  CALL MPI_initialized(lmpi_flag, impi_flag)
+!  if (.not. lmpi_flag)   call MPI_INIT(impi_flag)
 
   !----  MIMIC CALL InitializeParallel
   CALL MPI_Comm_rank(MPI_COMM_WORLD,grank,impi_flag)
@@ -102,8 +102,8 @@ SUBROUTINE TEST_IMAS(IDS_EQ_IN, IDS_EQ_OUT, INDATA_XML, status_code, status_mess
   !---------------------------------------------------------------------
 
   !----  MPI Finalisation ----
-  call MPI_finalized(lmpi_flag, impi_flag)
-  IF (.NOT. lmpi_flag)   CALL MPI_Finalize(impi_flag)
+!  call MPI_finalized(lmpi_flag, impi_flag)
+!  IF (.NOT. lmpi_flag)   CALL MPI_Finalize(impi_flag)
   
 END SUBROUTINE TEST_IMAS
 
